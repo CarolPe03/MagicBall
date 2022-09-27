@@ -1,17 +1,16 @@
-const questionInput=document.getElementById("question");
-const answerInput=document.getElementById("answer");
-
-const ask=function(){
-    let pregunta=questionInput.value;
-    if (pregunta){
-        let respuesta=magicBall();
-        answerInput.value=respuesta;
+const ask = () => {
+    //Leer Pregunta
+    const questionInput = document.getElementById("question");
+    const answerInput = document.getElementById('answer');
+    if (questionInput.value !== ""){
+        //Recibir respuesta al preguntar a bola mágina
+        let answer = magicBall();
+        //Imprimir Resultado
+        answerInput.value = answer;
     } else {
-        answerInput.value="No puedo responder a eso";
+        answerInput.value = "Pregunta algo!!";
     }
-    let respuesta=magicBall();
-    answerInput.value=respuesta;
-}
+};
 
 const magicBall =function(){
     
